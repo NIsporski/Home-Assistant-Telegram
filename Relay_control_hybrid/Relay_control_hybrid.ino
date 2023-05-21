@@ -26,11 +26,8 @@ IRsend irsend(D2);
 WiFiServer server(80);
 
 // Replace with your network credentials
-//const char* ssid     = "AndroidAPA810"; // Enter your WIFI name
-//const char* password = "Buntovna_5"; // Enter your WIFI password
-
-const char* ssid     = "A1_87BB"; // Enter your WIFI name
-const char* password = "48575443D85C8CA4"; // Enter your WIFI password
+const char* ssid     = "NET"; // Enter your WIFI name
+const char* password = "123456789"; // Enter your WIFI password
 
 // Variable to store the HTTP request
 String header;
@@ -40,7 +37,6 @@ String output1State = "off";
 
 // Initialize Telegram BOT
 #define BOTtoken "6122016934:AAH4-cO3H3s726q5IvNTTOo5yBIj94T3aMk"  // nisporski_bot
-//#define BOTtoken "6220835657:AAHRPDu9SS7YYLSrGRDf_fHly7ti9M_0FoQ"  // iasmarthome_bot
 
 // Use @myidbot to find out the chat ID of an individual or a group
 // Also note that you need to click "start" on a bot before it can message you
@@ -339,7 +335,7 @@ void setup() {
   pinMode(ledPin1, OUTPUT);
   digitalWrite(ledPin1, ledState1);
   
-    // Connect to Wi-Fi
+  // Connect to Wi-Fi
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   #ifdef ESP32
